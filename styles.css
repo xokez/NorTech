@@ -341,23 +341,20 @@ header {
     width: 200px; /* Ajusta el tamaño del logotipo */
 }
 
-.footer-links {
-    margin: 1.5rem 0;
-}
-
 .footer-links p {
     font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+
 }
 
 .social-icon {
-    font-size: 2rem; /* Tamaño más grande para los íconos */
-    color: #ffffff; /* Color blanco para los íconos */
-    margin: 0 15px; /* Espaciado entre los íconos */
-    transition: transform 0.3s ease;
+    font-size: 2rem;  /* Tamaño grande para los íconos */
+    margin: 0 15px;
+    color: #ffffff;
+    transition: color 0.3s ease-in-out;
 }
 
 .social-icon:hover {
+    color: #00adb5;
     transform: scale(1.2); /* Efecto hover */
 }
 
@@ -384,4 +381,34 @@ header {
     border-bottom: 1px solid #ffffff;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
+}
+/* Media Queries para ajustar los tamaños en dispositivos móviles */
+@media (max-width: 768px) {
+    h1, h2, h3 {
+        font-size: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header .cta-button {
+        font-size: 1rem;
+    }
+
+    .navbar .logo span {
+        font-size: 1.5rem;
+    }
+
+    .about-content, .price-card {
+        max-width: 100%;
+    }
+
+    .pricing {
+        padding: 1rem 0;
+    }
+
+    .footer {
+        padding: 1.5rem 1rem;
+    }
 }
