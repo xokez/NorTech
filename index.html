@@ -126,6 +126,7 @@
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
             const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=nortech.site@gmail.com&su=Consulta desde NorTech&body=Nombre: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0AMensaje: ${encodeURIComponent(message)}`;
+            window.open(mailtoLink, '_blank');
         }
     </script>
 
