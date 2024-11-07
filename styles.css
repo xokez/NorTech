@@ -9,35 +9,89 @@ body {
 
 /* Encabezados */
 h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;  /* Fuente moderna para encabezados */
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: #ffffff;  /* Color blanco para todos los encabezados */
+    color: #ffffff; /* Color de acento */
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
 }
 
-/* Estilos de Header */
+/* Estilo para el Header */
 header {
-    background: #272727;  /* Fondo oscuro para el header */
-    text-align: center;  /* Centrado del texto */
-    padding: 4rem 2rem;  /* Espaciado interior */
+    background-image: url('space-background.jpg'); /* Usa tu imagen de fondo aquí */
+    background-size: cover;
+    background-position: center;
+    height: 90vh; /* Hace el header más grande */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff; /* Color blanco para el texto */
+    padding: 0 2rem;
+    overflow: hidden;
 }
 
+/* Fondo con Efecto de Blur */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Fondo oscuro para mejorar la legibilidad */
+    filter: blur(5px); /* Efecto de desenfoque */
+    z-index: -1; /* Asegura que el contenido esté por encima del fondo */
+}
+
+/* Título Principal */
 header h1 {
-    font-size: 3rem;  /* Tamaño grande para el título */
-    color: #00adb5;  /* Color destacado para el título */
-    margin-bottom: 0.5rem;  /* Espaciado inferior */
+    font-size: 4rem; /* Aumenta el tamaño para que sea impactante */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase; /* Mayúsculas para un toque más profesional */
+    letter-spacing: 2px; /* Espaciado entre letras para más énfasis */
+    color: #00adb5; /* Color moderno que resalta sobre el fondo */
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); /* Sombra para dar profundidad */
 }
 
-header p {
-    font-size: 1.2rem;  /* Tamaño moderado para el subtítulo */
-    color: #cccccc;  /* Color gris para el subtítulo */
+/* Estilo del Botón CTA */
+header .cta-button {
+    background-color: #00adb5; /* Color que destaca */
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase; /* Hacerlo más impactante */
 }
 
-/* Títulos de Sección */
-section h2 {
-    font-size: 2rem;  /* Tamaño de fuente para títulos de sección */
-    color: #00adb5;  /* Color resaltado */
-    text-align: center;  /* Centrado de los títulos */
-    margin-bottom: 1.5rem;  /* Espaciado debajo del título */
+/* Efecto Hover del Botón */
+header .cta-button:hover {
+    background-color: #007d82; /* Cambio de color al pasar el ratón */
+    transform: scale(1.1); /* Efecto de crecimiento del botón */
+}
+
+/* Animación del Header */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+header {
+    animation: fadeIn 5s ease-out; /* Animación de entrada del header */
 }
 
 /* Barra de navegación */
@@ -84,63 +138,152 @@ section h2 {
     color: #00adb5;
 }
 
-/* Sección de Servicios */
-.services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin: 4rem 0;
-}
-
-.service-card {
-    background-color: #272727;
-    padding: 2rem;
-    border-radius: 8px;
-    width: 250px;
+/* Sección de Quiénes Somos */
+.about {
+    background: url('world.jpg') no-repeat center center/cover; /* Imagen de fondo */
+    position: relative; /* Necesario para colocar el overlay */
+    padding: 4rem 2rem;
     text-align: center;
+    height: 100vh; /* La sección ocupará toda la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.service-card h3 {
-    font-size: 1.5rem;
-    color: #00adb5;
+/* Filtro de desenfoque (blur) en el fondo */
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Fondo oscuro con transparencia */
+    backdrop-filter: blur(5px); /* Aplica el desenfoque */
+    z-index: -1; /* Asegura que el filtro se aplique al fondo */
+}
+
+/* Contenedor de contenido centralizado */
+.about-content {
+    background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+    padding: 2rem;
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 800px; /* Limitar el tamaño */
+    width: 90%; /* Asegura que se ajuste en pantallas pequeñas */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra para resaltar el recuadro */
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    color: #ffffff; /* Color resaltado */
     margin-bottom: 1rem;
 }
 
-.service-card p {
-    color: #cccccc;
-    font-size: 1rem;
-}
-
-/* Sección de Precios */
-.pricing {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin: 4rem 0;
-}
-
-.price-card {
-    background-color: #272727;
-    padding: 2rem;
-    border-radius: 8px;
-    width: 250px;
-    text-align: center;
-}
-
-.price-card h3 {
-    font-size: 1.5rem;
-    color: #00adb5;
-    margin-bottom: 1rem;
-}
-
-.price-card .price {
-    font-size: 1.8rem;
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
     color: #ffffff;
-    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
 }
 
+/* Estilos de la sección de términos */
+.terms {
+    padding: 2rem;
+    background-color: #121212;
+    color: #ffffff;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+/* Estilo del título principal */
+.terms-title {
+    font-size: 2rem;
+    color: #00adb5;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #00adb5;
+    padding-bottom: 0.5rem;
+}
+
+/* Estilo de los subtítulos */
+.terms-subtitle {
+    font-size: 1.25rem;
+    color: #ffffff;
+    background-color: #272727;
+    padding: 0.5rem 1rem;
+    border-left: 5px solid #00adb5;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+}
+
+/* Estilo del texto */
+.terms p {
+    font-size: 1rem;
+    color: #cccccc;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+    text-align: justify;
+}
+
+/* Estilos generales para la sección de precios */
+.pricing {
+    text-align: center;
+    /* Centra el contenido horizontalmente */
+    padding: 50px 0;
+    /* Agrega espacio arriba y abajo de la sección */
+}
+
+/* Estilos para el contenedor de las tarjetas de precios */
+.price-container {
+    display: flex;
+    /* Organiza las tarjetas en una fila */
+    flex-wrap: wrap;
+    /* Permite que las tarjetas se envuelvan a la siguiente línea si no caben */
+    justify-content: center;
+    /* Centra las tarjetas horizontalmente */
+}
+
+/* Estilos para cada tarjeta de precio */
+.price-card {
+    background-color: #a6a6a6;
+    /* Fondo blanco para las tarjetas */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    /* Ancho de cada tarjeta */
+}
+
+/* Estilos para los títulos de las tarjetas */
+.price-card h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para las descripciones de las tarjetas */
+.price-card p {
+    color: #4d4949;
+    line-height: 1.5;
+}
+
+/* Estilos para el precio */
+.price-box {
+    background-color: #f0f0f08a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.price {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1e1d1d;
+}
 /* Sección de Contacto */
 .contact form {
     display: flex;
@@ -178,54 +321,67 @@ section h2 {
     background-color: #009c9f;
 }
 
-/* Pie de página */
-footer {
-    background-color: #272727;  /* Fondo oscuro */
-    color: #ffffff;  /* Color de texto blanco */
-    text-align: center;
-    padding: 2rem 1rem;
-    margin-top: 4rem;
+/* Estilos del Footer */
+.footer {
+    background-color: #001b28; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    margin-top: 3rem;
+    padding: 3rem 2rem; /* Espaciado más grande */
 }
 
-footer p {
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 200px; /* Ajusta el tamaño del logotipo */
+}
+
+.footer-links {
+    margin: 1.5rem 0;
+}
+
+.footer-links p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-icon {
+    font-size: 2rem; /* Tamaño más grande para los íconos */
+    color: #ffffff; /* Color blanco para los íconos */
+    margin: 0 15px; /* Espaciado entre los íconos */
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Efecto hover */
+}
+
+.footer-text {
     font-size: 1rem;
+    line-height: 1.5;
+}
+
+.footer-text a {
+    color: #00adb5; /* Color resaltado para los enlaces */
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+.footer-text p {
     margin: 0.5rem 0;
 }
 
-footer a {
-    color: #ffffff;  /* Color blanco para los enlaces */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-}
-
-footer a:hover {
-    color: #00adb5;  /* Color de resaltado para los enlaces */
-}
-
-/* Contenedor de contenido del footer */
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Íconos sociales */
-.social-icons {
-    margin-top: 1rem;
-}
-
-.social-icons a {
-    font-size: 2rem;  /* Tamaño grande para los íconos */
-    margin: 0 15px;
-    color: #ffffff;
-    transition: color 0.3s ease-in-out;
-}
-
-.social-icons a:hover {
-    color: #00adb5;  /* Color de resaltado en hover */
-}
-
-/* Estilos para los íconos específicos */
-.whatsapp-icon i, .telegram-icon i {
-    font-size: 2rem;
+/* Línea separadora blanca debajo de los iconos de redes sociales */
+.footer .footer-links {
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
 }
