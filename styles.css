@@ -1,0 +1,231 @@
+/* Estilos globales */
+body {
+    font-family: 'Roboto', sans-serif;  /* Fuente base */
+    background-color: #121212;  /* Fondo oscuro para el cuerpo */
+    color: #ffffff;  /* Color de texto blanco */
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezados */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;  /* Fuente moderna para encabezados */
+    font-weight: 700;
+    color: #ffffff;  /* Color blanco para todos los encabezados */
+}
+
+/* Estilos de Header */
+header {
+    background: #272727;  /* Fondo oscuro para el header */
+    text-align: center;  /* Centrado del texto */
+    padding: 4rem 2rem;  /* Espaciado interior */
+}
+
+header h1 {
+    font-size: 3rem;  /* Tamaño grande para el título */
+    color: #00adb5;  /* Color destacado para el título */
+    margin-bottom: 0.5rem;  /* Espaciado inferior */
+}
+
+header p {
+    font-size: 1.2rem;  /* Tamaño moderado para el subtítulo */
+    color: #cccccc;  /* Color gris para el subtítulo */
+}
+
+/* Títulos de Sección */
+section h2 {
+    font-size: 2rem;  /* Tamaño de fuente para títulos de sección */
+    color: #00adb5;  /* Color resaltado */
+    text-align: center;  /* Centrado de los títulos */
+    margin-bottom: 1.5rem;  /* Espaciado debajo del título */
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #272727;
+    padding: 20px 40px;
+    height: 80px;
+}
+
+.navbar .logo span {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 36px;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    margin: 0 20px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-links a:hover {
+    color: #00adb5;
+}
+
+/* Sección de Servicios */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.service-card {
+    background-color: #272727;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: #00adb5;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: #cccccc;
+    font-size: 1rem;
+}
+
+/* Sección de Precios */
+.pricing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.price-card {
+    background-color: #272727;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+}
+
+.price-card h3 {
+    font-size: 1.5rem;
+    color: #00adb5;
+    margin-bottom: 1rem;
+}
+
+.price-card .price {
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Sección de Contacto */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact label {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.contact input, .contact textarea {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.contact button {
+    padding: 1rem;
+    background-color: #00adb5;
+    color: #ffffff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #009c9f;
+}
+
+/* Pie de página */
+footer {
+    background-color: #272727;  /* Fondo oscuro */
+    color: #ffffff;  /* Color de texto blanco */
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: #ffffff;  /* Color blanco para los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #00adb5;  /* Color de resaltado para los enlaces */
+}
+
+/* Contenedor de contenido del footer */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Íconos sociales */
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    font-size: 2rem;  /* Tamaño grande para los íconos */
+    margin: 0 15px;
+    color: #ffffff;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #00adb5;  /* Color de resaltado en hover */
+}
+
+/* Estilos para los íconos específicos */
+.whatsapp-icon i, .telegram-icon i {
+    font-size: 2rem;
+}
