@@ -4,155 +4,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NorTech</title>
+    <meta name="description"
+        content="NorTech - Soluciones informáticas profesionales para tu PC. Servicios de formateo, instalación de sistemas operativos y programas.">
+    <title>NorTech - Soluciones Informáticas Profesionales</title>
+
+    <!-- Favicon -->
     <link rel="icon" href="nortech.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="nortech-icon.png">
+
+    <!-- Precargar fuentes críticas -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" as="style">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&family=Montserrat:wght@700&display=swap"
+        as="style">
+
+    <!-- Estilos -->
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <!-- Font Awesome para íconos sociales -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Fuentes -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&family=Montserrat:wght@700&display=swap">
 </head>
 
 <body>
     <!-- Barra de navegación -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Navegación principal">
         <div class="logo">
-            <span>NorTech</span>
+            <a href="#home" aria-label="Inicio">NorTech</a>
         </div>
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+            <span class="hamburger"></span>
+        </button>
         <ul class="nav-links">
-            <li><a href="#home">Inicio</a></li>
+            <li><a href="#home" aria-current="page">Inicio</a></li>
             <li><a href="#about">Quiénes Somos</a></li>
-            <li><a href="#services">Servicios</a></li>
+            <li><a href="#terminos-servicio">Servicios</a></li>
             <li><a href="#pricing">Precios</a></li>
             <li><a href="#contact">Contacto</a></li>
         </ul>
     </nav>
 
-    <header id="home">
-        <h1>NorTech: Soluciones Informáticas Eficientes para tu PC</h1>
-        <a href="#contact" class="cta-button">Contáctanos Ahora</a>
-    </header>
+    <main>
+        <!-- Hero Section -->
+        <header id="home" class="hero">
+            <h1>NorTech: Soluciones Informáticas Eficientes para tu PC</h1>
+            <a href="#contact" class="cta-button">Contáctanos Ahora</a>
+        </header>
 
-    <!-- Sección de Quiénes Somos -->
-    <section id="about" class="about">
-        <div class="about-content">
+        <!-- Sección Quiénes Somos -->
+        <section id="about" class="about">
             <h2>Quiénes Somos</h2>
-            <p>En NorTech nos dedicamos a brindar soluciones informáticas de alta calidad, especializándonos en el
-                formateo, instalación y activación de sistemas operativos Windows y programas básicos como Google,
-                WinRAR, Steam, Office y antivirus. Nuestra misión es ofrecer un servicio rápido y confiable que optimice
-                tu experiencia tecnológica.</p>
-        </div>
-    </section>
-
-    <!-- Sección de Términos de Servicio -->
-    <section id="terminos-servicio" class="terms">
-        <h2 class="terms-title">Términos del Servicio</h2>
-        <p>Estos términos regulan el uso de nuestro servicio de formatep e instalacio de Windows, al igual que la instalacion de software. Al contratar nuestro servicio, usted acepta cumplir con las siguientes condiciones:</p>
-
-        <h3 class="terms-subtitle">1. Alcance del Servicio</h3>
-        <p>El servicio incluye la instalación software en general en equipos compatibles, configuración inicial y asesoramiento sobre el uso básico del sistema o programa.</p>
-
-        <h3 class="terms-subtitle">2. Responsabilidades del Cliente</h3>
-        <p>El cliente debe asegurarse de que el hardware del equipo cumpla con los requisitos mínimos para la instalación de Windows. También debe realizar copias de seguridad de sus datos antes de la instalación, ya que no nos hacemos responsables por la pérdida de información.</p>
-
-        <h3 class="terms-subtitle">3. Costos y Pagos</h3>
-        <p>Los precios de nuestros servicios son los especificados en el presupuesto previamente aceptado, aunque se puede llegar a un acuerdo para el bienestar de todos. Los pagos deben ser realizados en su totalidad antes de la finalización del servicio.</p>
-
-        <h3 class="terms-subtitle">4. Garantías</h3>
-        <p>Ofrecemos una garantía de 30 días para cualquier problema relacionado directamente con la instalación. No cubrimos problemas de hardware o software no relacionados con nuestros servicios.</p>
-
-        <h3 class="terms-subtitle">5. Modificaciones</h3>
-        <p>Nos reservamos el derecho de modificar estos términos en cualquier momento. Cualquier cambio será comunicado al cliente antes de la próxima prestación del servicio.</p>
-
-        <h3 class="terms-subtitle">6. Aceptación de Términos</h3>
-        <p>Al solicitar el servicio, el cliente confirma que ha leído, entendido y aceptado estos términos y condiciones.</p>
-    </section>
-
-    <!-- Sección de Precios -->
-    <section id="pricing" class="pricing">
-        <h2>Nuestros Servicios y Precios</h2>
-        <div class="price-container">
-            <div class="price-card">
-                <h3>Formateo e Instalación de SO</h3>
-                <p>Formateo completo de tu PC e instalación de Sistema Operativo sin Backup.</p>
-                <div class="price-box">
-                    <p class="price">$35.695</p>
-                </div>
+            <div class="about-content">
+                <p>En NorTech nos dedicamos a brindar soluciones informáticas de alta calidad, especializándonos en el
+                    formateo, instalación y activación de sistemas operativos Windows y programas básicos como Google,
+                    WinRAR, Steam, Office y antivirus. Nuestra misión es ofrecer un servicio rápido y confiable que
+                    optimice
+                    tu experiencia tecnológica.</p>
             </div>
-            <div class="price-card">
-                <h3>Instalación de Drivers</h3>
-                <p>Instalamos y configuramos todos los drivers necesarios para tu PC.</p>
-                <div class="price-box">
-                    <p class="price">$25.822</p>
-                </div>
+        </section>
+
+        <!-- Sección Términos de Servicio -->
+        <section id="terminos-servicio" class="terms">
+            <h2>Términos del Servicio</h2>
+            <div class="terms-content">
+                <article>
+                    <h3>1. Alcance del Servicio</h3>
+                    <p>El servicio incluye la instalación software en general en equipos compatibles, configuración
+                        inicial y asesoramiento sobre el uso básico del sistema o programa.</p>
+                </article>
+
+                <article>
+                    <h3>2. Responsabilidades del Cliente</h3>
+                    <p>El cliente debe asegurarse de que el hardware del equipo cumpla con los requisitos mínimos para
+                        la instalación de Windows. También debe realizar copias de seguridad de sus datos antes de la
+                        instalación.</p>
+                </article>
+
+                <article>
+                    <h3>3. Costos y Pagos</h3>
+                    <p>Los precios de nuestros servicios son los especificados en el presupuesto previamente aceptado.
+                        Los pagos deben realizarse antes de la finalización del servicio.</p>
+                </article>
+
+                <article>
+                    <h3>4. Garantías</h3>
+                    <p>Ofrecemos una garantía de 30 días para cualquier problema relacionado directamente con la
+                        instalación.</p>
+                </article>
             </div>
-            <div class="price-card">
-                <h3>Instalación Programas OpenSource x1</h3>
-                <p>Instalación de programas esenciales como Google, WinRAR, etc.</p>
-                <div class="price-box">
-                    <p class="price">$13.658</p>
-                </div>
+        </section>
+
+        <!-- Sección Precios -->
+        <section id="pricing" class="pricing">
+            <h2>Nuestros Servicios y Precios</h2>
+            <div class="price-container">
+                <article class="price-card">
+                    <h3>Formateo e Instalación de SO</h3>
+                    <p>Formateo completo de tu PC e instalación de Sistema Operativo sin Backup.</p>
+                    <div class="price-box">
+                        <p class="price">$35.695</p>
+                    </div>
+                </article>
+
+                <article class="price-card">
+                    <h3>Instalación de Drivers</h3>
+                    <p>Instalamos y configuramos todos los drivers necesarios para tu PC.</p>
+                    <div class="price-box">
+                        <p class="price">$25.822</p>
+                    </div>
+                </article>
+
+                <article class="price-card">
+                    <h3>Instalación Programas OpenSource</h3>
+                    <p>Instalación de programas esenciales como Google, WinRAR, etc.</p>
+                    <div class="price-box">
+                        <p class="price">$13.658</p>
+                    </div>
+                </article>
+
+                <article class="price-card">
+                    <h3>Instalación Programas Comerciales</h3>
+                    <p>Instalación de programas comerciales como Office, antivirus, etc.</p>
+                    <div class="price-box">
+                        <p class="price">$17.848</p>
+                    </div>
+                </article>
             </div>
-            <div class="price-card">
-                <h3>Instalación Programas comerciales x1</h3>
-                <p>Instalación de programas comerciales previstos como Office, antivirus, etc.</p>
-                <div class="price-box">
-                    <p class="price">$17.848</p>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contact" class="contact">
+            <h2>Contáctanos</h2>
+            <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required autocomplete="name">
+                    <span class="error-message" aria-live="polite"></span>
                 </div>
-            </div>
-        </div>
-    </section>
 
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                    <span class="error-message" aria-live="polite"></span>
+                </div>
 
-    <!-- Sección de Contacto -->
-    <section id="contact" class="contact">
-        <h2>Contáctanos</h2>
-        <form
-            action="https://mail.google.com/mail/?view=cm&fs=1&to=nortech.site@gmail.com&su=Consulta%20desde%20NorTech"
-            method="get" target="_blank" onsubmit="return submitForm()">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            <button type="submit">Enviar Mensaje</button>
-        </form>
-    </section>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <span class="error-message" aria-live="polite"></span>
+                </div>
 
-    <script>
-        function submitForm() {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=nortech.site@gmail.com&su=Consulta desde NorTech&body=Nombre: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0AMensaje: ${encodeURIComponent(message)}`;
-            window.open(mailtoLink, '_blank');
-        }
-    </script>
-
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="logo.png" alt="NorTech Logo">
+                <img src="logo.png" alt="Logo de NorTech">
             </div>
+
             <div class="footer-links">
-                <p>Contactanos a través de:</p>
-                <a href="https://wa.me/qr/EAJ5GVO5U6TSC1" target="_blank" class="social-icon">
-                    <i class="fab fa-whatsapp"></i> <!-- Ícono de WhatsApp -->
-                </a>
-                <a href="https://t.me/NorTechInfo" target="_blank" class="social-icon">
-                    <i class="fab fa-telegram"></i> <!-- Ícono de Telegram -->
-                </a>
+                <h4>Síguenos en redes sociales</h4>
+                <div class="social-links">
+                    <a href="https://wa.me/qr/EAJ5GVO5U6TSC1" target="_blank" rel="noopener noreferrer"
+                        class="social-icon" aria-label="Contactar por WhatsApp">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://t.me/NorTechInfo" target="_blank" rel="noopener noreferrer" class="social-icon"
+                        aria-label="Contactar por Telegram">
+                        <i class="fab fa-telegram" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
+
             <div class="footer-text">
-                <p>© 2024 NorTech - Todos los derechos reservados</p>
-                <p>Contactanos: <a href="mailto:nortech.site@gmail.com">nortech.site@gmail.com</a></p>
+                <p>&copy; 2024 NorTech - Todos los derechos reservados</p>
+                <p>Contáctanos: <a href="mailto:nortech.site@gmail.com">nortech.site@gmail.com</a></p>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Manejo del menú móvil
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            navToggle?.addEventListener('click', () => {
+                const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', !isExpanded);
+                navLinks?.classList.toggle('active');
+            });
+
+            // Validación y envío del formulario
+            const contactForm = document.getElementById('contactForm');
+
+            contactForm?.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                if (validateForm(name, email, message)) {
+                    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=nortech.site@gmail.com&su=Consulta desde NorTech&body=Nombre: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0AMensaje: ${encodeURIComponent(message)}`;
+                    window.open(mailtoLink, '_blank');
+                    contactForm.reset();
+                }
+            });
+        });
+
+        function validateForm(name, email, message) {
+            let isValid = true;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Validación del nombre
+            if (name.trim().length < 2) {
+                showError('name', 'El nombre debe tener al menos 2 caracteres');
+                isValid = false;
+            } else {
+                clearError('name');
+            }
+
+            // Validación del email
+            if (!emailRegex.test(email)) {
+                showError('email', 'Por favor, ingrese un email válido');
+                isValid = false;
+            } else {
+                clearError('email');
+            }
+
+            // Validación del mensaje
+            if (message.trim().length < 10) {
+                showError('message', 'El mensaje debe tener al menos 10 caracteres');
+                isValid = false;
+            } else {
+                clearError('message');
+            }
+
+            return isValid;
+        }
+
+        function showError(fieldId, message) {
+            const field = document.getElementById(fieldId);
+            const errorSpan = field.nextElementSibling;
+            field.classList.add('error');
+            errorSpan.textContent = message;
+        }
+
+        function clearError(fieldId) {
+            const field = document.getElementById(fieldId);
+            const errorSpan = field.nextElementSibling;
+            field.classList.remove('error');
+            errorSpan.textContent = '';
+        }
+    </script>
+    <script src="animations.js"></script>
 </body>
 
 </html>
